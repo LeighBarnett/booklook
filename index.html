@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="node_modules/handlebars/dist/handlebars.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>BookLook <i class="fa fa-eye" aria-hidden="true" ></i></h1>
+                <h3>Search by Book Title</h3>
+                <input type="text" class="form-control" id="title-input" placeholder="Title">
+                <button type="button" class="btn btn-primary" id="btn-title">Search</button>
+                <h3>Search by Author</h3>
+                <input type="text" class="form-control" id="author-input" placeholder="Author">
+                <button type="button" class="btn btn-primary" id="btn-author">Search</button>
+                <h3>Search by Book ISBN</h3>
+                <input type="text" class="form-control" id="isbn-input" placeholder="ISBN">
+                <button type="button" class="btn btn-primary" id="btn-isbn">Search</button>
+                <div class="book-list"></div>
+                <script id="book-template" type="text/x-handlebars-template">
+                    <div class="bookdiv">
+                        <h2 classs="book"> {{title}} </h2>
+                        <h3 classs="book">Author: {{author}} </h3>
+                        <img src={{image}} />
+                        <div class="description">
+                            <h4>Description:</h4>
+                            <p classs="book">{{description}} </p>
+                        </div>
+                    </div>
+                </script>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
